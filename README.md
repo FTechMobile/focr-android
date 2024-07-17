@@ -70,7 +70,7 @@ OCRManager.registerOCRCallback(new IOCRCallback() {
   }
 
   @Override
-  public void onSuccess(@NonNull TransformData result) {
+  public void onSuccess(@NonNull OCRData result) {
 
   }
 });
@@ -87,7 +87,7 @@ OCRManager.registerOCRCallback(object : IOCRCallback {
 
   }
 
-  override fun onSuccess(result: TransformData) {
+  override fun onSuccess(result: OCRData) {
 
   })
 })

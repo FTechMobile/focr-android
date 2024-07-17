@@ -2,7 +2,7 @@ package ai.ftech.focrsdk.sdk
 
 import ai.ftech.focrsdk.R
 import ai.ftech.focrsdk.domain.model.InfoData
-import ai.ftech.focrsdk.domain.model.TransformData
+import ai.ftech.focrsdk.domain.model.OCRData
 import ai.ftech.focrsdk.extension.dpToPx
 import ai.ftech.focrsdk.extension.getString
 import android.content.Context
@@ -28,8 +28,8 @@ class FOCRView @JvmOverloads constructor(ctx: Context, attrs: AttributeSet? = nu
         llRoot = findViewById(R.id.llRoot)
     }
 
-    fun setData(transformData: TransformData?) {
-        transformData?.data?.let { listData ->
+    fun setData(ocrData: OCRData?) {
+        ocrData?.transformData?.data?.let { listData ->
             listData.forEach { infoData ->
                 when (infoData.type) {
                     OCRInfoDataType.TEXT.value -> {
